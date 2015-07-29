@@ -46,7 +46,7 @@
   <% end %>
   <div class="breather-top row">
     <div class="text-right">
-      <%= form_for @invoice.active_record_invoice, :url => send_invoice_to_harvest_path(@invoice.id) do |f| %>
+      <%= form_for @invoice, :url => send_invoice_to_harvest_path(@invoice.id) do |f| %>
         <%= f.submit 'Send invoice to Harvest', :class => "btn btn-default" %>
         <% if @invoice.harvest_id.present? %>
           <%= link_to "https://#{Rails.application.config.harvest.subdomain}.harvestapp.com/invoices/#{@invoice.harvest_id}" do %>

@@ -15,7 +15,15 @@ class Invoice < ActiveRecord::Base
     invoicing_week.previous
   end
 
-  def generate_for_harvest
-    Present::Harvest::GeneratedInvoice.new(self)
+  def timesheets
+    find_projects_timesheets.map(&:timesheet).uniq
   end
+
+  private
+    def find_projects_timesheets
+      ( ProjectsTimesheet.for_week_and_project(self.prior_week, self.project) +
+        ProjectsTimesheet.for_week_and_project(self.invoicing_week, self.project)
+      ).reject {|pt| pt.timesheet.empty? }
+    end
+
 end

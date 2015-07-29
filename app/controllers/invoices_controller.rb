@@ -18,11 +18,11 @@ class InvoicesController < ApplicationController
   end
 
   def create
-    redirect_to @invoice.active_record_invoice
+    redirect_to @invoice
   end
 
   def update
-    redirect_to @invoice.active_record_invoice
+    redirect_to @invoice
   end
 
   def show
@@ -31,18 +31,18 @@ class InvoicesController < ApplicationController
   def send_to_harvest
     Present::Harvest::SendInvoice.new.send!(@invoice)
     flash[:info] = ["Sent invoice to Harvest!"]
-    redirect_to @invoice.active_record_invoice
+    redirect_to @invoice
   end
 
 private
 
   def generate_invoice_from_params
     @invoice = if params[:id].present?
-      Invoice.find(params[:id]).generate_for_harvest
+      Invoice.find(params[:id])
     else
       week = Week.new(Time.zone.parse(params[:invoice][:invoicing_week]))
       project = Project.find(params[:invoice][:project_id])
-      Invoice.find_or_create_by(week.ymd_hash.merge(:project => project)).generate_for_harvest
+      Invoice.find_or_create_by(week.ymd_hash.merge(:project => project))
     end
   end
 end
