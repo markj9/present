@@ -18,6 +18,7 @@ module Present
     config.present = ActiveSupport::OrderedOptions.new
     config.present.admins = Rails.application.secrets.admin_github_ids
     config.present.local_override = ENV['LOCAL_OVERRIDE_AS'] || false
+    config.present.company_name = ENV['PRESENT_COMPANY_NAME'] || "Test Double"
 
     config.github = ActiveSupport::OrderedOptions.new
     config.github.client_id = Rails.application.secrets.github_client_id
