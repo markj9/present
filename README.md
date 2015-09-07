@@ -102,7 +102,7 @@ If you need to debug with heroku data locally, you can do so with:
 $ ./script/production_backup.sh
 ```
 
-Then edit your "development" connection in `database.yml` to point to a database named "present_development"
+Then edit your "development" connection in `database.yml` to point to a database named "present_backup"
 
 #### Running offline
 
