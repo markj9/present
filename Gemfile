@@ -32,7 +32,7 @@ group :development, :test do
   gem 'web-console'
 
   gem 'minitest-rails'
-  gem 'minitest-given'
+  gem 'minitest-given', '= 3.7.1'
   gem 'minitest-rails-capybara'
   gem 'selenium-webdriver'
   gem 'poltergeist'

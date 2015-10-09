@@ -2,6 +2,14 @@ class Week
   attr_reader :year, :month, :day, :beginning, :end
   include Comparable
 
+  class Configuration
+    attr_reader :day_week_begins
+
+    def initialize(day_week_begins=:sunday)
+      @day_week_begins = day_week_begins
+    end
+  end
+
   def self.now
     new(Time.zone.now)
   end
