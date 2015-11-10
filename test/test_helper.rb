@@ -26,7 +26,7 @@ end
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(app, :js_errors => false)
 end
-Capybara.default_driver = ENV['HEADLESS'] ? :poltergeist : :chrome
+Capybara.default_driver = ENV['HEADFUL'] ? :chrome : :poltergeist
 Capybara.server_port = ENV['PRESENT_TEST_PORT']
 
 # ensure only one AR connection so we can use transactional fixtures
