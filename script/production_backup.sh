@@ -1,5 +1,11 @@
 #!/bin/bash -e
 
+# Reminder, sometimes backups will fill up, so you'll have to manually delete
+# old captured ones with:
+#
+# heroku pg:backups delete --confirm testdouble-present <BACKUP ID>
+
+
 echo "--> Starting backup on the server"
 heroku pg:backups capture
 
