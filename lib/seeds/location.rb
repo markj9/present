@@ -16,6 +16,7 @@ module Seeds
         {:city => "Hilliard", :state => "OH" },
         {:city => "Johnstown", :state => "OH" },
         {:city => "Hayesville", :state => "OR"},
+        {:city => "Portland", :state => "OR"},
         {:city => "Jonestown", :state => "PA" },
         {:city => "Salt Lake City", :state => "UT" },
         {:city => "Virginia Beach", :state => "VA" },
