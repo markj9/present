@@ -2,8 +2,7 @@ language: ruby
 cache: bundler
 sudo: false
 rvm: 2.2.0
-before_script: rake db:test:prepare
-script: rake test
+before_script: bundle exec rake db:test:prepare
 env:
   global:
   - CI=true
