@@ -81,6 +81,9 @@ GEM
       sorcerer (>= 0.3.7)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    good_migrations (0.0.2)
+      activerecord (>= 3.1)
+      railties (>= 3.1)
     harvested (3.1.1)
       hashie
       httparty
@@ -246,6 +249,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dotenv-rails
   faraday
+  good_migrations
   harvested
   jquery-rails
   minitest-around

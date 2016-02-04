@@ -9,6 +9,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'rails', '4.2'
 gem 'pg'
+gem 'good_migrations'
 
 group :production do
   gem 'unicorn'
