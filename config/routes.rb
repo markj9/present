@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :invoices
 
   resources :clients
+  patch "harvest/sync_clients", :to => "harvest#sync_clients", :as => :sync_harvest_clients
 
   get "internal_notes", :to => "notes#internal", :as => :internal_notes
   resources :projects do
