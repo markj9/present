@@ -15,6 +15,7 @@ module Seeds
         {:city => "Powell", :state => "OH" },
         {:city => "Hilliard", :state => "OH" },
         {:city => "Johnstown", :state => "OH" },
+        {:city => "Bend", :state => "OR"},
         {:city => "Hayesville", :state => "OR"},
         {:city => "Portland", :state => "OR"},
         {:city => "Jonestown", :state => "PA" },
